@@ -272,14 +272,14 @@ Informações do Machine Learning para o projeto SmartFin:
 
 O projeto continua em desenvolvimento, conforme a lista abaixo é apresentado os próximos passos: 
 
-[x] Aprovação dos professores 
-  [x] Receber feedback e melhorias 
-  [x] Registrar nota do RFC 
-[x] Apresentação - Defesa do Portfólio I 
-[] Definição do plano de entregas 
-[] Receber aprovação do plano do produto 
-[] Desenvolvimento do projeto 
-[] Apresentação Final – Defesa do Portfólio II 
+- [x] Aprovação dos professores 
+  - [x] Receber feedback e melhorias 
+  - [x] Registrar nota do RFC 
+- [x] Apresentação - Defesa do Portfólio I 
+- [] Definição do plano de entregas 
+- [] Receber aprovação do plano do produto 
+- [] Desenvolvimento do projeto 
+- [] Apresentação Final – Defesa do Portfólio II 
 
 ## 4. Referências 
 
