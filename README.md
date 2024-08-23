@@ -138,7 +138,7 @@ Nesta seção, é apresentado os padrões de arquitetura selecionados para orien
 
 #### 2.2.3. Modelos C4 
 
-Os modelos C4 ^[10]^ (Context, Containers, Components, Code) oferecem uma estrutura robusta para detalhar a arquitetura de um sistema em diferentes níveis de abstração. 
+Os modelos C4 <sup>[10]</sup> (Context, Containers, Components, Code) oferecem uma estrutura robusta para detalhar a arquitetura de um sistema em diferentes níveis de abstração. 
 
 ##### Contexto (Context) - Nível 1: 
 
@@ -276,10 +276,48 @@ O projeto continua em desenvolvimento, conforme a lista abaixo é apresentado os
   - [x] Receber feedback e melhorias 
   - [x] Registrar nota do RFC 
 - [x] Apresentação - Defesa do Portfólio I 
-- [ ] Definição do plano de entregas 
+- [x] Definição do plano de entregas 
 - [ ] Receber aprovação do plano do produto 
+- [ ] Publicar a definição das entragas no trello
 - [ ] Desenvolvimento do projeto 
 - [ ] Apresentação Final – Defesa do Portfólio II 
+
+Plano de Entregas:
+
+- [ ] Aplicar um modelo preditivo no google colab **(31/08/2024)**
+  - [x] Obter dados do mercado de ações
+  - [x] Analisar e ajustar os dados
+  - [x] Aplicar o modelo preditivo
+  - [ ] Treinar e validar o modelo
+  - [ ] Disponibilizar o modelo
+- [ ] Implementar branch dev no github **(31/08/2024)**
+- [ ] Aplicar sonar **(07/09/2024)**
+- [ ] Desenvolver a aplicação para disponibilizar o modelo para consulta **(07/09/2024)**
+  - [ ] Realizar a consulta
+  - [ ] Validar os dados retornados
+- [ ] Aplicar teste E2E em conjunto com o desenvolvimento **(09/11/2024)**
+- [ ] Implementar CI/CD **(09/11/2024)**
+- [ ] Implementação e disponibilização da Aplicação Web **(09/11/2024)**
+  - [ ] Montar o design principal das telas da aplicação web **(14/09/2024)**
+    - [ ] Login
+    - [ ] Cadastro de Conta
+    - [ ] Página Principal
+    - [ ] Tela do Simulador
+    - [ ] Controle da Conta
+  - [ ] Definir um mock para testes iniciais (Integração com o banco será aplicada no decorrer) **(21/09/2024)**
+  - [ ] Desenvolver as telas principais **(09/11/2024)**
+    - [ ] Login
+    - [ ] Cadastro de Conta
+    - [ ] Página Principal
+    - [ ] Tela do Simulador
+    - [ ] Controle da Conta
+- [ ] Aplicar integrações **(16/11/2024)**
+  - [ ] Banco de Dados
+  - [ ] Aplicação IA
+- [ ] Revisar sonar **(16/11/2024)**
+- [ ] Revisar cobertura do teste E2E **(16/11/2024)**
+- [ ] Revisar pipeline CI/CD **(16/11/2024)**
+- [ ] Disponibilizar a aplicação em cloud **(18/11/2024)**
 
 ## 4. Referências 
 
