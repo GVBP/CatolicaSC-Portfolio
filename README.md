@@ -16,7 +16,7 @@ Neste documento são apresentados o conceito e as funcionalidades do SmartFin, u
 
 No mundo moderno, o controle financeiro pessoal está se tornando cada vez mais importante. Com pessoas interessadas em entender as diversas opções de investimento disponíveis e em quais investir, abra-se espaço a ferramentas que ajudem no controle das finanças e na tomada de decisões sobre investimentos. 
 
-O desenvolvimento deste projeto se mostra altamente relevante para o campo da engenharia de software. Por meio da integração de tecnologias, como a inteligência artificial (IA), e do desenvolvimento de aplicações web para a apresentação de portfólios de investimento, o projeto busca fornecer aos usuários um controle financeiro melhor. Esta solução visa abordar os desafios enfrentados ao explorar novos investimentos no mercado financeiro. O objetivo final do projeto é oferecer uma ferramenta que ajude os interessados a controlarem suas finanças e a tomar decisões informadas sobre investimentos.  
+O desenvolvimento deste projeto se mostra altamente relevante para o campo da engenharia de software. Por meio da integração de tecnologias, como a inteligência artificial (IA), e do desenvolvimento de aplicações web para a apresentação de portfólios de investimento, o projeto busca fornecer aos usuários um controle financeiro melhor. Esta solução visa abordar os desafios enfrentados ao explorar novos investimentos no mercado financeiro. O objetivo final do projeto é oferecer uma ferramenta que ajude os interessados a controlarem suas finanças e a tomarem decisões informadas sobre investimentos.  
 
 O texto está organizado como descrito a seguir. A Seção 1 contém os detalhes do tema do projeto, lista dos principais problemas que o projeto visa resolver e a delimitação dos problemas que o projeto não abordará. A Seção 2 aponta os requisitos do tema proposto, considerações de design, bem como a apresentação do modelo C4, Stack Tecnológica e Considerações de Segurança. A Seção 3 contém a descrição dos passos seguintes após a conclusão do documento.
 
@@ -239,29 +239,29 @@ Informações do Machine Learning para o projeto SmartFin:
 #### 2.3.1. Linguagens de Programação 
 
 **JavaScript**: Uma linguagem versátil para desenvolvimento de software em uma variedade de contextos e aplicações. Possui flexibilidade e capacidade de criar interfaces de usuários interativas e dinâmicas. 
-**TypeScript**: Utilizado pelo framework Angular ^[2]^ com compatibilidade ao JavaScript. Oferece os benefícios da tipagem estática, permitindo a escrita de códigos mais legível e escalável. 
+**TypeScript**: Utilizado pelo framework Angular <sup>[2]</sup> com compatibilidade ao JavaScript. Oferece os benefícios da tipagem estática, permitindo a escrita de códigos mais legível e escalável. 
 **Python**: É uma escolha excelente para projetos de IA devido à sua simplicidade, vasta gama de bibliotecas e frameworks, além de ser uma linguagem referência no campo da IA. 
 
 #### 2.3.2. Frameworks e Bibliotecas 
 
-**Node.js ^[1]^**: Permite a construção de servidores eficientes e escaláveis devido ao seu modelo de I/O não bloqueante e baseado em eventos. 
-**Angular ^[2]^**: Estrutura robusta e bem definida para desenvolver interfaces web. 
-**Bootstrap ^[3]^**: Facilita o design responsivo e estilização rápida de componentes web. 
-**NumPy ^[4]^ e Pandas ^[5]^**: Essenciais para processamento e análise de grandes volumes de dados. 
+**Node.js <sup>[1]</sup>**: Permite a construção de servidores eficientes e escaláveis devido ao seu modelo de I/O não bloqueante e baseado em eventos. 
+**Angular <sup>[2]</sup>**: Estrutura robusta e bem definida para desenvolver interfaces web. 
+**Bootstrap <sup>[3]</sup>**: Facilita o design responsivo e estilização rápida de componentes web. 
+**NumPy <sup>[4]</sup> e Pandas <sup>[5]</sup>**: Essenciais para processamento e análise de grandes volumes de dados. 
 **Yfinance e Pandas DataReader**: Ferramentas convenientes para obter dados financeiros históricos e atuais. 
 **Serpapi**: Útil para obter dados adicionais de buscas na web que podem impactar o mercado financeiro. 
 **Sklearn**: Biblioteca completa para implementar modelos de machine learning para análise preditiva e simulação de investimentos. 
 
 #### 2.3.3. Ferramentas de Desenvolvimento e Gestão de Projetos 
 
-**Visual Studio Code ^[6]^**: Oferece recursos como autocompletar inteligente, depuração integrada, terminal embutido e uma vasta coleção de extensões. 
-**Github Actions ^[7]^**: Facilita a execução de testes, a construção de artefatos, a implementação de aplicativos e a automação de tarefas repetitivas, garantindo que o código seja sempre testado e pronto para produção. 
-**SonarQube ^[8]^**: Ajuda a manter a qualidade do código e a segurança, fornecendo feedback contínuo e recomendações para melhorias, essencial para manter a robustez do projeto. 
-**GitHub Project ^[7]^**: Com recursos como quadros Kanban, ele facilita a visualização do fluxo de trabalho e a colaboração entre os membros da equipe. 
-**Wiki do Github ^[7]^**: Útil para registrar informações importantes, guias de uso, decisões de design e outras documentações que ajudam a equipe a manter-se alinhada. 
+**Visual Studio Code <sup>[6]</sup>**: Oferece recursos como autocompletar inteligente, depuração integrada, terminal embutido e uma vasta coleção de extensões. 
+**Github Actions <sup>[7]</sup>**: Facilita a execução de testes, a construção de artefatos, a implementação de aplicativos e a automação de tarefas repetitivas, garantindo que o código seja sempre testado e pronto para produção. 
+**SonarQube <sup>[8]</sup>**: Ajuda a manter a qualidade do código e a segurança, fornecendo feedback contínuo e recomendações para melhorias, essencial para manter a robustez do projeto. 
+**GitHub Project <sup>[7]</sup>**: Com recursos como quadros Kanban, ele facilita a visualização do fluxo de trabalho e a colaboração entre os membros da equipe. 
+**Wiki do Github <sup>[7]</sup>**: Útil para registrar informações importantes, guias de uso, decisões de design e outras documentações que ajudam a equipe a manter-se alinhada. 
 **TDD**: Assegura que o código atenda aos requisitos especificados e promove a criação de código mais limpo e menos propenso a erros, melhorando a qualidade e a manutenção do software 
 **Kanban**: Ajuda a equipe a visualizar tarefas, limitar o trabalho em progresso e melhorar continuamente os processos de desenvolvimento 
-**MongoDB ^[9]^**: Ideal para aplicações que requerem armazenamento de grandes volumes de dados não estruturados ou semiestruturados. 
+**MongoDB <sup>[9]</sup>**: Ideal para aplicações que requerem armazenamento de grandes volumes de dados não estruturados ou semiestruturados. 
 
 ### 2.4. Considerações de Segurança 
 
@@ -278,20 +278,20 @@ O projeto continua em desenvolvimento, conforme a lista abaixo é apresentado os
 - [x] Apresentação - Defesa do Portfólio I 
 - [x] Definição do plano de entregas 
 - [ ] Receber aprovação do plano do produto 
-- [ ] Publicar a definição das entragas no trello
+- [ ] Publicar a definição das entregas no Trello
 - [ ] Desenvolvimento do projeto 
 - [ ] Apresentação Final – Defesa do Portfólio II 
 
 Plano de Entregas:
 
-- [ ] Aplicar um modelo preditivo no google colab **(31/08/2024)**
+- [ ] Aplicar um modelo preditivo no Google Colab **(31/08/2024)**
   - [x] Obter dados do mercado de ações
   - [x] Analisar e ajustar os dados
   - [x] Aplicar o modelo preditivo
   - [ ] Treinar e validar o modelo
   - [ ] Disponibilizar o modelo
-- [ ] Implementar branch dev no github **(31/08/2024)**
-- [ ] Aplicar sonar **(07/09/2024)**
+- [ ] Implementar branch dev no GitHub **(31/08/2024)**
+- [ ] Aplicar Sonar **(07/09/2024)**
 - [ ] Desenvolver a aplicação para disponibilizar o modelo para consulta **(07/09/2024)**
   - [ ] Realizar a consulta
   - [ ] Validar os dados retornados
@@ -304,7 +304,7 @@ Plano de Entregas:
     - [ ] Página Principal
     - [ ] Tela do Simulador
     - [ ] Controle da Conta
-  - [ ] Definir um mock para testes iniciais (Integração com o banco será aplicada no decorrer) **(21/09/2024)**
+  - [ ] Definir um mock para testes iniciais **(21/09/2024)**
   - [ ] Desenvolver as telas principais **(09/11/2024)**
     - [ ] Login
     - [ ] Cadastro de Conta
@@ -317,7 +317,7 @@ Plano de Entregas:
 - [ ] Revisar sonar **(16/11/2024)**
 - [ ] Revisar cobertura do teste E2E **(16/11/2024)**
 - [ ] Revisar pipeline CI/CD **(16/11/2024)**
-- [ ] Disponibilizar a aplicação em cloud **(18/11/2024)**
+- [ ] Disponibilizar a aplicação em Cloud **(18/11/2024)**
 
 ## 4. Referências 
 
