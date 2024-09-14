@@ -284,13 +284,12 @@ O projeto continua em desenvolvimento, conforme a lista abaixo é apresentado os
 
 Plano de Entregas:
 
-- [ ] Aplicar um modelo preditivo no Google Colab **(31/08/2024)**
+- [x] Aplicar um modelo preditivo no Google Colab **(31/08/2024)**
   - [x] Obter dados do mercado de ações
   - [x] Analisar e ajustar os dados
   - [x] Aplicar o modelo preditivo
-  - [ ] Treinar e validar o modelo
-  - [ ] Disponibilizar o modelo
-- [ ] Implementar branch dev no GitHub **(31/08/2024)**
+  - [x] Treinar e validar o modelo
+  - [x] Disponibilizar o modelo
 - [ ] Aplicar Sonar **(07/09/2024)**
 - [ ] Desenvolver a aplicação para disponibilizar o modelo para consulta **(07/09/2024)**
   - [ ] Realizar a consulta

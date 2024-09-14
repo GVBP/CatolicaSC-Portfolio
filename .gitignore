@@ -1,0 +1,4 @@
+# Python ia_model
+ia_model/venv/
+ia_model/__pycache__/
+*.csv
