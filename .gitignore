@@ -2,3 +2,6 @@
 ai_model/venv/
 ai_model/__pycache__/
 *.csv
+
+# Outros
+**/.DS_Store
