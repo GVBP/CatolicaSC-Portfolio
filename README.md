@@ -291,9 +291,9 @@ Plano de Entregas:
   - [x] Treinar e validar o modelo
   - [x] Disponibilizar o modelo
 - [ ] Aplicar Sonar **(07/09/2024)**
-- [ ] Desenvolver a aplicação para disponibilizar o modelo para consulta **(07/09/2024)**
-  - [ ] Realizar a consulta
-  - [ ] Validar os dados retornados
+- [x] Desenvolver a aplicação para disponibilizar o modelo para consulta **(07/09/2024)**
+  - [x] Realizar a consulta
+  - [x] Validar os dados retornados
 - [ ] Aplicar teste E2E em conjunto com o desenvolvimento **(09/11/2024)**
 - [ ] Implementar CI/CD **(09/11/2024)**
 - [ ] Implementação e disponibilização da Aplicação Web **(09/11/2024)**
