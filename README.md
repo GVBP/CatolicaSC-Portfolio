@@ -277,8 +277,8 @@ O projeto continua em desenvolvimento, conforme a lista abaixo é apresentado os
   - [x] Registrar nota do RFC 
 - [x] Apresentação - Defesa do Portfólio I 
 - [x] Definição do plano de entregas 
-- [ ] Receber aprovação do plano do produto 
-- [ ] Publicar a definição das entregas no Trello
+- [x] Receber aprovação do plano do produto 
+- [ ] Publicar a definição das entregas no GitHub Project
 - [ ] Desenvolvimento do projeto 
 - [ ] Apresentação Final – Defesa do Portfólio II 
 
@@ -297,12 +297,12 @@ Plano de Entregas:
 - [ ] Aplicar teste E2E em conjunto com o desenvolvimento **(09/11/2024)**
 - [ ] Implementar CI/CD **(09/11/2024)**
 - [ ] Implementação e disponibilização da Aplicação Web **(09/11/2024)**
-  - [ ] Montar o design principal das telas da aplicação web **(14/09/2024)**
-    - [ ] Login
-    - [ ] Cadastro de Conta
-    - [ ] Página Principal
-    - [ ] Tela do Simulador
-    - [ ] Controle da Conta
+  - [x] Montar o design principal das telas da aplicação web **(14/09/2024)**
+    - [x] Login
+    - [x] Cadastro de Conta
+    - [x] Página Principal
+    - [x] Tela do Simulador
+    - [x] Controle da Conta
   - [ ] Definir um mock para testes iniciais **(21/09/2024)**
   - [ ] Desenvolver as telas principais **(09/11/2024)**
     - [ ] Login
