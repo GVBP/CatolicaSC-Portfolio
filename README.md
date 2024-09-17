@@ -278,7 +278,7 @@ O projeto continua em desenvolvimento, conforme a lista abaixo é apresentado os
 - [x] Apresentação - Defesa do Portfólio I 
 - [x] Definição do plano de entregas 
 - [x] Receber aprovação do plano do produto 
-- [ ] Publicar a definição das entregas no GitHub Project
+- [x] Publicar a definição das entregas no GitHub Project
 - [ ] Desenvolvimento do projeto 
 - [ ] Apresentação Final – Defesa do Portfólio II 
 
@@ -303,8 +303,13 @@ Plano de Entregas:
     - [x] Página Principal
     - [x] Tela do Simulador
     - [x] Controle da Conta
-  - [ ] Definir um mock para testes iniciais **(21/09/2024)**
   - [ ] Desenvolver as telas principais **(09/11/2024)**
+    - [ ] Login
+    - [ ] Cadastro de Conta
+    - [ ] Página Principal
+    - [ ] Tela do Simulador
+    - [ ] Controle da Conta
+  - [ ] Definir um mock para testes iniciais **(09/11/2024)**
     - [ ] Login
     - [ ] Cadastro de Conta
     - [ ] Página Principal
