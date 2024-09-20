@@ -3,5 +3,53 @@ ai_model/venv/
 ai_model/__pycache__/
 *.csv
 
-# Outros
-**/.DS_Store
+# compiled output
+web-app/dist
+web-app/tmp
+web-app/out-tsc
+
+# dependencies
+web-app/node_modules
+
+# IDEs and editors
+.vscode/
+.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+web-app/.angular/cache
+.sass-cache
+connect.lock
+coverage
+libpeerconnection.log
+npm-debug.log
+testem.log
+typings
+yarn-error.log
+
+# e2e
+web-app/e2e/*.js
+web-app/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Others
+web-app/idx/
+web-app/package-lock.json
+web-app/package.json.template
+web-app/BUILD.bazel
+web-app/config.json
