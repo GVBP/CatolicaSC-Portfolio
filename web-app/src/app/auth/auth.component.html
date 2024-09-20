@@ -1,0 +1,36 @@
+<div class="container_x">
+    <div class="container" id="container" [class.right-panel-active]="isSignUpActive">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1 class="margin-bottom">Criar Conta</h1>
+                <input type="text" placeholder="Nome">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Senha">
+                <button class="margin-top" (click)="toggleSignUp()" disabled>Criar</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1 class="margin-bottom">Fazer Login</h1>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Senha">
+                <a href="#" style="cursor: not-allowed;" onclick="event.preventDefault()">Esqueceu sua senha?</a>
+                <button (click)="toggleSignIn()" disabled>ACESSAR</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Bem-vindo novamente!</h1>
+                    <p>Para continuar conectado conosco, faça login com suas informações pessoais</p>
+                    <button class="ghost" (click)="toggleSignIn()">Entrar</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Olá! <br> Deseja criar sua conta?</h1>
+                    <p>Insira seus dados pessoais e comece sua jornada conosco</p>
+                    <button class="ghost" (click)="toggleSignUp()">CADASTRAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
