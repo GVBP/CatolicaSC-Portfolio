@@ -9,7 +9,7 @@ import { of, throwError } from 'rxjs';
 import { User } from './interface/user';
 
 class MockAuthService {
-    login(credentials: User) {
+    login(_credentials: User) {
         return of({ token: 'mock-token', message: 'Success', userName: 'John' });
     }
     register() {

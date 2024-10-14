@@ -11,6 +11,7 @@ import {MatSort, MatSortModule} from '@angular/material/sort';
 import {MatInputModule} from '@angular/material/input';
 
 import { SidebarComponent } from '../sidebar/sidebar.component';
+import { DatepickerViewsSelectionComponent } from '../components/datepicker-views-selection/datepicker-views-selection.component'
 
 export interface Transaction {
   id: string;
@@ -23,8 +24,7 @@ export interface Transaction {
 
 const CATEGORY: string[] = [
   'Despesa',
-  'Receita'
-];
+  'Receita'];
 
 @Component({
   selector: 'app-transacoes',
@@ -44,8 +44,7 @@ const CATEGORY: string[] = [
     MatPaginatorModule,
 
     SidebarComponent,
-  ]
-})
+    DatepickerViewsSelectionComponent ] })
 export class TransacoesComponent implements AfterViewInit {
   displayedColumns: string[] = ['id', 'situacao', 'data', 'descricao', 'categoria', 'valor', 'acoes'];
   dataSource: MatTableDataSource<Transaction>;
@@ -83,7 +82,8 @@ export class TransacoesComponent implements AfterViewInit {
 
   // Função chamada ao selecionar uma opção no dropdown
   onSelectionChange(option: string): void {
-    this.selectionChange.emit(option);  // Emitir a opção selecionada
+    // Emitir a opção selecionada
+    this.selectionChange.emit(option);
 
     if (option === 'receitas') {
       this.dataSource.filter = 'RECEITA';
@@ -107,6 +107,5 @@ function createNewUser(id: number): Transaction {
     data: '01/09/2024',
     descricao: 'Descrição',
     categoria: CATEGORY[Math.round(Math.random() * (CATEGORY.length - 1))],
-    valor: '5,00'
-  };
+    valor: '5,00' };
 }
