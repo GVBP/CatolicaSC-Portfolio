@@ -1,21 +1,21 @@
 <div class="container_x">
     <div class="container" id="container" [class.right-panel-active]="isSignUpActive">
         <div class="form-container sign-up-container">
-            <form action="#">
+            <form [formGroup]="loginForm" (ngSubmit)="toggleSignUp()">
                 <h1 class="margin-bottom">Criar Conta</h1>
-                <input type="text" placeholder="Nome">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Senha">
-                <button class="margin-top" (click)="toggleSignUp()" disabled>Criar</button>
+                <input type="text" formControlName="login" placeholder="Nome" aria-label="Nome">
+                <input type="email" formControlName="email" placeholder="Email" aria-label="Email">
+                <input type="password" formControlName="password" placeholder="Senha" aria-label="Senha">
+                <button class="margin-top" type="submit" [disabled]="loginForm.invalid">Criar</button>
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="#">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                 <h1 class="margin-bottom">Fazer Login</h1>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Senha">
-                <a href="#" style="cursor: not-allowed;" onclick="event.preventDefault()">Esqueceu sua senha?</a>
-                <button (click)="toggleSignIn()" disabled>ACESSAR</button>
+                <input type="email" formControlName="login" placeholder="Email" aria-label="Email">
+                <input type="password" formControlName="password" placeholder="Senha" aria-label="Senha">
+                <a href="#" (click)="preventDefault($event)" style="cursor: not-allowed;">Esqueceu sua senha?</a>
+                <button type="submit" [disabled]="loginForm.invalid">ACESSAR</button>
             </form>
         </div>
         <div class="overlay-container">

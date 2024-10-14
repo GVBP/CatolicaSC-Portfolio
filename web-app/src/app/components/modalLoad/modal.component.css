@@ -1,0 +1,17 @@
+.style-field {
+    width: 100%;
+}
+
+.align-right {
+    justify-content: flex-end;
+}
+
+.style-load {
+    width: 25px !important;
+    height: 25px !important;
+}
+
+.loading-container {
+    display: flex;
+    align-items: center;
+  }

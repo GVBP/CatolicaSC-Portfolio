@@ -1,0 +1,38 @@
+<div class="logo-container">
+    <h1 class="logo">SmartFin</h1>
+</div>
+
+<button class="new-button-container" mat-raised-button color="primary" [matMenuTriggerFor]="menu">
+    + Novo
+</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item>Despesa</button>
+    <button mat-menu-item>Receita</button>
+</mat-menu>
+
+<mat-nav-list>
+    <a mat-list-item href="/dashboard">
+        <mat-icon>home</mat-icon>
+        <span>Dashboard</span>
+    </a>
+    <a mat-list-item href="/transacoes">
+        <mat-icon>list_alt</mat-icon>
+        <span>Transações</span>
+    </a>
+    <a mat-list-item href="/categorias">
+        <mat-icon>category</mat-icon>
+        <span>Categorias</span>
+    </a>
+    <a mat-list-item href="/simulacoes">
+        <mat-icon>timeline</mat-icon>
+        <span>Simulações</span>
+    </a>
+    <a mat-list-item href="/perfil">
+        <mat-icon>person</mat-icon>
+        <span>Meu Perfil</span>
+    </a>
+    <a mat-list-item href="/logout">
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Sair</span>
+    </a>
+</mat-nav-list>
