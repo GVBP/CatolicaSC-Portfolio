@@ -1,30 +1,25 @@
-import { Component, Output, EventEmitter, AfterViewInit, ViewChild } from '@angular/core';
+import { Component, Output, EventEmitter, AfterViewInit, ViewChild, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import { MatTableModule, MatTableDataSource } from '@angular/material/table';
-import { MatSelectModule } from '@angular/material/select';
-import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
-import {MatSort, MatSortModule} from '@angular/material/sort';
-import {MatInputModule} from '@angular/material/input';
-
+//Sidebar
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { SidebarComponent } from '../sidebar/sidebar.component';
-import { DatepickerViewsSelectionComponent } from '../components/datepicker-views-selection/datepicker-views-selection.component'
-
-export interface Transaction {
-  id: string;
-  situacao: string;
-  data: string;
-  descricao: string;
-  categoria: string;
-  valor: string;
-}
-
-const CATEGORY: string[] = [
-  'Despesa',
-  'Receita'];
+//Datepicker
+import { DatepickerViewsSelectionComponent } from '../components/datepicker-views-selection/datepicker-views-selection.component';
+import * as _moment from 'moment';
+import { Moment } from 'moment';
+//Select
+import { MatSelectModule } from '@angular/material/select';
+//Filter
+import { MatInputModule } from '@angular/material/input';
+//Table
+import { MatTableModule, MatTableDataSource } from '@angular/material/table';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatSort, MatSortModule } from '@angular/material/sort';
+import { Transaction } from '../interface/transaction';
+import { TransactionService } from '../services/transaction.service';
+//Cards
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-transacoes',
@@ -33,31 +28,44 @@ const CATEGORY: string[] = [
   standalone: true,
   imports: [
     CommonModule,
-
-    MatSidenavModule,
-    MatCardModule,
     MatIconModule,
-    MatTableModule,
+    //Sidebar
+    MatSidenavModule,
+    SidebarComponent,
+    //Datepicker
+    DatepickerViewsSelectionComponent,
+    //Select
     MatSelectModule,
+    //Filter
     MatInputModule,
+    //Table
+    MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-
-    SidebarComponent,
-    DatepickerViewsSelectionComponent ] })
+    //Cards
+    MatCardModule
+  ]
+})
 export class TransacoesComponent implements AfterViewInit {
-  displayedColumns: string[] = ['id', 'situacao', 'data', 'descricao', 'categoria', 'valor', 'acoes'];
-  dataSource: MatTableDataSource<Transaction>;
-
+  //Select
+  @Output() selectionChange = new EventEmitter<string>();
+  //Table
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor() {
-    // Create 100 users
-    const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
+  //Datepicker
+  selectedDate: Moment | undefined;
+  //Select
+  selectedOption: string | null = 'transacoes';
+  //Table
+  displayedColumns: string[] = ['id', 'situacao', 'data', 'descricao', 'categoria', 'valor', 'acoes'];
+  dataSource: MatTableDataSource<Transaction> = new MatTableDataSource();
+  transactionService: TransactionService = inject(TransactionService);
 
-    // Assign the data to the data source for the table to render
-    this.dataSource = new MatTableDataSource(users);
+  constructor() {
+    this.transactionService.getTransactions().subscribe(data => {
+      this.dataSource.data = data;
+    });
   }
 
   ngAfterViewInit() {
@@ -65,22 +73,14 @@ export class TransacoesComponent implements AfterViewInit {
     this.dataSource.sort = this.sort;
   }
 
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-
-    if (this.dataSource.paginator) {
-      this.dataSource.paginator.firstPage();
-    }
+  //Datepicker
+  onDateChanged(date: Moment) {
+    this.selectedDate = date;
+    // Atualiza o filtro de transações aqui
+    console.log('Data selecionada:', this.selectedDate.format('MM/YYYY'));
   }
 
-  // Valor selecionado, que aparecerá no botão
-  selectedOption: string | null = 'transacoes';
-
-  // Emitir o valor da opção selecionada
-  @Output() selectionChange = new EventEmitter<string>();
-
-  // Função chamada ao selecionar uma opção no dropdown
+  //Select
   onSelectionChange(option: string): void {
     // Emitir a opção selecionada
     this.selectionChange.emit(option);
@@ -97,15 +97,14 @@ export class TransacoesComponent implements AfterViewInit {
       this.dataSource.paginator.firstPage();
     }
   }
-}
 
-/** Builds and returns a new User. */
-function createNewUser(id: number): Transaction {
-  return {
-    id: id.toString(),
-    situacao: 'Pago',
-    data: '01/09/2024',
-    descricao: 'Descrição',
-    categoria: CATEGORY[Math.round(Math.random() * (CATEGORY.length - 1))],
-    valor: '5,00' };
+  //Table
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
+  }
 }

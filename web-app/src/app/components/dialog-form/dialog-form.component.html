@@ -1,0 +1,89 @@
+<!--
+<h1 mat-dialog-title>Adicionar Transação</h1>
+<div mat-dialog-content>
+  <form [formGroup]="form">
+    <mat-form-field appearance="fill">
+      <mat-label>Categoria</mat-label>
+      <mat-select formControlName="categoria">
+        <mat-option value="Receita">Receita</mat-option>
+        <mat-option value="Despesa">Despesa</mat-option>
+      </mat-select>
+      <mat-error *ngIf="form.get('categoria').hasError('required')">
+        Categoria é obrigatória.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Descrição</mat-label>
+      <input matInput formControlName="descricao" />
+      <mat-error *ngIf="form.get('descricao').hasError('required')">
+        Descrição é obrigatória.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Valor</mat-label>
+      <input matInput formControlName="valor" placeholder="R$ 0,00" />
+      <mat-error *ngIf="form.get('valor').hasError('required')">
+        Valor é obrigatório.
+      </mat-error>
+      <mat-error *ngIf="form.get('valor').hasError('pattern')">
+        Apenas números são permitidos.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Data</mat-label>
+      <input matInput formControlName="data" placeholder="dd/mm/aaaa" />
+      <mat-error *ngIf="form.get('data').hasError('required')">
+        Data é obrigatória.
+      </mat-error>
+      <mat-error *ngIf="form.get('data').hasError('pattern')">
+        Formato inválido. Use dd/mm/aaaa.
+      </mat-error>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button (click)="onSave()" [disabled]="form.invalid">Salvar</button>
+</div>
+-->
+<div class="flex-container">
+  <mat-card class="card">
+    <div class="header">
+      <h2>Nova receita</h2>
+      <button mat-icon-button aria-label="Fechar">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+    <div class="valor">
+      <mat-icon color="primary">attach_money</mat-icon>
+      <span class="valor-text">{{ valor }}</span>
+      <span class="moeda-text">BRL</span>
+    </div>
+    <mat-slide-toggle [(ngModel)]="foiPaga" class="toggle">
+      Foi paga
+    </mat-slide-toggle>
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Data</mat-label>
+      <input matInput [(ngModel)]="data" placeholder="DD/MM/YYYY">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Descrição</mat-label>
+      <input matInput [(ngModel)]="descricao" placeholder="Descrição">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Categoria</mat-label>
+      <input matInput [(ngModel)]="categoria" placeholder="Receita">
+    </mat-form-field>
+    <div class="button-group">
+      <button mat-stroked-button color="primary" (click)="salvarECriarNova()">
+        SALVAR E CRIAR NOVA
+      </button>
+      <button mat-raised-button color="primary" (click)="salvar()">
+        SALVAR
+      </button>
+    </div>
+  </mat-card>
+</div>

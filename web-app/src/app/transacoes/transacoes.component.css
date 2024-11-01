@@ -22,34 +22,25 @@ mat-sidenav-content {
 /* transacoes */
 
 /* transacoes - header */
-.dropdown-container {
-    margin: 10px;
-    width: 200px;
+.container {
+    margin-top: 20px;
 }
-mat-form-field {
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.select-field,
+.filter-field {
     width: 100%;
 }
-mat-select {
-    width: 100%;
+.filter {
+    justify-content: space-between;
 }
-.select-laranja .mat-select-trigger {
-    background-color: #F57C00;
-    color: white;
-    padding: 8px;
-    border-radius: 4px;
+.col-md-3 {
+    flex: 0 0 auto;
+    width: 25%; /* 3 colunas em um grid de 12 */
 }
-.select-vermelho .mat-select-trigger {
-    background-color: #FF5252;
-    color: white;
-    padding: 8px;
-    border-radius: 4px;
-}
-.select-verde .mat-select-trigger {
-    background-color: #4CAF50;
-    color: white;
-    padding: 8px;
-    border-radius: 4px;
-} 
 
 
 /* transacoes - table */
@@ -68,3 +59,4 @@ mat-select {
     width: 32%;
     text-align: center;
 }
+  

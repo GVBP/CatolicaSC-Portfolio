@@ -3,26 +3,42 @@
         <app-sidebar></app-sidebar>
     </mat-sidenav>
     <mat-sidenav-content>
-        <div class="dropdown-container">
-            <mat-form-field appearance="fill">
-                <mat-select [(value)]="selectedOption" (selectionChange)="onSelectionChange($event.value)" [ngClass]="{
+        
+
+        <div class="container">
+            <!-- Datepicker ocupando 3 colunas e centralizado -->
+            <div class="row">
+                <div class="col-md-3">
+                    <datepicker-views-selection (dateChanged)="onDateChanged($event)"></datepicker-views-selection>
+                </div>
+            </div>
+        
+            <!-- Select e Filter na mesma linha -->
+            <div class="row filter">
+                <!-- Select ocupando 3 colunas -->
+                <div class="col-md-3">
+                    <mat-form-field appearance="fill" class="select-field">
+                        <mat-select [(value)]="selectedOption" (selectionChange)="onSelectionChange($event.value)" [ngClass]="{
                               'select-laranja': selectedOption === 'transacoes',
                               'select-vermelho': selectedOption === 'despesas',
                               'select-verde': selectedOption === 'receitas'
                             }">
-                    <mat-option value="transacoes">Transações</mat-option>
-                    <mat-option value="despesas">Despesas</mat-option>
-                    <mat-option value="receitas">Receitas</mat-option>
-                </mat-select>
-            </mat-form-field>
-
-            <datepicker-views-selection></datepicker-views-selection>
+                            <mat-option value="transacoes">Transações</mat-option>
+                            <mat-option value="despesas">Despesas</mat-option>
+                            <mat-option value="receitas">Receitas</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+        
+                <!-- Filter ocupando 4 colunas -->
+                <div class="col-md-3">
+                    <mat-form-field class="filter-field">
+                        <mat-label>Filtrar</mat-label>
+                        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Receita" #input>
+                    </mat-form-field>
+                </div>
+            </div>
         </div>
-
-        <mat-form-field>
-            <mat-label>Filter</mat-label>
-            <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Receita" #input>
-        </mat-form-field>
 
         <div class="mat-elevation-z8">
             <table mat-table [dataSource]="dataSource" matSort>
