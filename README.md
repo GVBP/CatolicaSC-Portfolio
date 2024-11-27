@@ -9,3 +9,7 @@ A documentação do projeto encontra-se na [wiki deste repositório](https://git
 # SmartFin
 
 A aplicação principal do projeto encontra-se no repositório [SmartFin](https://github.com/GVBP/SmartFin).
+
+# Backlog
+
+O backlog do projeto encontra-se no [CatolicaSC-Portfolio-Project](https://github.com/users/GVBP/projects/2)
