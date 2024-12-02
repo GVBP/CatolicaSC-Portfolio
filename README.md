@@ -10,6 +10,8 @@
 
 Neste documento são apresentados o conceito e as funcionalidades do SmartFin, uma ferramenta de controle financeiro pessoal projetada para auxiliar na tomada de decisões sobre a saúde financeira. O principal propósito do SmartFin é registrar entradas e saídas do dinheiro, além de oferecer a integração com uma IA para monitorar essas transações, retornando insights personalizados. A ferramenta também disponibiliza a visualização de gráficos para analisar os dados de forma clara e intuitiva.
 
+---
+
 > [!NOTE]
 >
 > ## FAQ
