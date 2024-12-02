@@ -47,3 +47,5 @@ Neste documento são apresentados o conceito e as funcionalidades do SmartFin, u
 > [Quais frameworks são utilizados?](https://github.com/GVBP/CatolicaSC-Portfolio/wiki/EspecificacaoTecnica#23-stack-tecnol%C3%B3gica)
 >
 > [Onde está o roadmap do projeto?](https://github.com/users/GVBP/projects/2)
+>
+> [Onde está o UI do projeto?](https://www.figma.com/design/AKcQEHeOkbKGKQyP6TiCrp/SmartFin?m=auto&t=Ro4D4XhxPJ8Y9JK0-1)
